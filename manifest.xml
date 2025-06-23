@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:type="TaskPaneApp">
+  <Id>8f6e3d6f-dffa-4c1c-8aa9-123456789abc</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>SummarizeIt Inc.</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName DefaultValue="Summarize Email" />
+  <Description DefaultValue="Summarizes long emails using AI." />
+  <IconUrl DefaultValue="https://example.com/icon.png"/>
+  <SupportUrl DefaultValue="https://example.com/support"/>
+  <AppDomains>
+    <AppDomain>https://example.com</AppDomain>
+  </AppDomains>
+  <Hosts>
+    <Host Name="Mailbox" />
+  </Hosts>
+  <Requirements>
+    <Sets DefaultMinVersion="1.1">
+      <Set Name="Mailbox" />
+    </Sets>
+  </Requirements>
+  <DefaultSettings>
+    <SourceLocation DefaultValue="https://Ohade.github.io/outlook-summarize-addin/taskpane.html"/>
+  </DefaultSettings>
+  <Permissions>ReadWriteItem</Permissions>
+</OfficeApp>
