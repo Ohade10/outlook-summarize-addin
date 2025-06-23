@@ -1,12 +1,70 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Summarize Email</title>
-  <script src="taskpane.js"></script>
+  <meta charset="UTF-8">
+  <title>Email Summarizer</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 20px;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-bottom: 12px;
+      color: #2b579a;
+    }
+
+    button {
+      background-color: #2b579a;
+      color: white;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #1d3c78;
+    }
+
+    #summaryBox {
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 12px;
+      margin-top: 16px;
+      font-size: 14px;
+      line-height: 1.5;
+      max-height: 300px;
+      overflow-y: auto;
+    }
+
+    .loading {
+      opacity: 0.6;
+    }
+
+    #copyButton {
+      margin-top: 10px;
+      display: none;
+      background-color: #6c757d;
+    }
+
+    #copyButton.copied {
+      background-color: #28a745;
+    }
+  </style>
 </head>
 <body>
-  <h2>Summarize Email</h2>
+  <h2>Summarize This Email</h2>
   <button onclick="summarize()">Summarize</button>
-  <p id="summary">Summary will appear here.</p>
+  <div id="summaryBox">Summary will appear here.</div>
+  <button id="copyButton" onclick="copySummary()">Copy Summary</button>
+
+  <script src="taskpane.js"></script>
 </body>
 </html>
