@@ -1,28 +1,50 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
-           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-           xsi:type="TaskPaneApp">
-  <Id>8f6e3d6f-dffa-4c1c-8aa9-123456789abc</Id>
-  <Version>1.0.0.0</Version>
-  <ProviderName>SummarizeIt Inc.</ProviderName>
-  <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="Summarize Email" />
-  <Description DefaultValue="Summarizes long emails using AI." />
-  <IconUrl DefaultValue="https://example.com/icon.png"/>
-  <SupportUrl DefaultValue="https://example.com/support"/>
-  <AppDomains>
-    <AppDomain>https://example.com</AppDomain>
-  </AppDomains>
+<VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides" Version="1.0">
   <Hosts>
-    <Host Name="Mailbox" />
+    <Host xsi:type="MailHost">
+      <DesktopFormFactor>
+        <FunctionFile resid="functionFile" />
+        <ExtensionPoint xsi:type="MessageReadCommandSurface">
+          <OfficeTab id="TabDefault">
+            <Group id="msgReadGroup">
+              <Label resid="groupLabel"/>
+              <Control xsi:type="Button" id="summarizeButton">
+                <Label resid="summarizeLabel"/>
+                <Supertip>
+                  <Title resid="summarizeLabel"/>
+                  <Description resid="summarizeDesc"/>
+                </Supertip>
+                <Icon>
+                  <bt:Image size="16" resid="icon16"/>
+                  <bt:Image size="32" resid="icon32"/>
+                  <bt:Image size="80" resid="icon80"/>
+                </Icon>
+                <Action xsi:type="ShowTaskpane">
+                  <SourceLocation resid="taskpaneUrl"/>
+                </Action>
+              </Control>
+            </Group>
+          </OfficeTab>
+        </ExtensionPoint>
+      </DesktopFormFactor>
+    </Host>
   </Hosts>
-  <Requirements>
-    <Sets DefaultMinVersion="1.1">
-      <Set Name="Mailbox" />
-    </Sets>
-  </Requirements>
-  <DefaultSettings>
-    <SourceLocation DefaultValue="https://Ohade.github.io/outlook-summarize-addin/taskpane.html"/>
-  </DefaultSettings>
-  <Permissions>ReadWriteItem</Permissions>
-</OfficeApp>
+
+  <Resources>
+    <bt:Images>
+      <bt:Image id="icon16" DefaultValue="https://yourdomain.com/icon-16.png"/>
+      <bt:Image id="icon32" DefaultValue="https://yourdomain.com/icon-32.png"/>
+      <bt:Image id="icon80" DefaultValue="https://yourdomain.com/icon-80.png"/>
+    </bt:Images>
+    <bt:Urls>
+      <bt:Url id="taskpaneUrl" DefaultValue="https://yourusername.github.io/outlook-summarize-addin/taskpane.html"/>
+      <bt:Url id="functionFile" DefaultValue="https://yourusername.github.io/outlook-summarize-addin/function.html"/>
+    </bt:Urls>
+    <bt:ShortStrings>
+      <bt:String id="groupLabel" DefaultValue="Summarize Tools"/>
+      <bt:String id="summarizeLabel" DefaultValue="Summarize Email"/>
+    </bt:ShortStrings>
+    <bt:LongStrings>
+      <bt:String id="summarizeDesc" DefaultValue="Click to summarize the selected email."/>
+    </bt:LongStrings>
+  </Resources>
+</VersionOverrides>
