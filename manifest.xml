@@ -1,4 +1,4 @@
-<VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides" Version="1.0">
+<VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="1.0">
   <Hosts>
     <Host xsi:type="MailHost">
       <DesktopFormFactor>
