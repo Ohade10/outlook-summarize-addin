@@ -37,6 +37,7 @@
     </bt:Images>
     <bt:Urls>
       <bt:Url id="taskpaneUrl" DefaultValue="https://ohade10.github.io/outlook-summarize-addin/taskpane.html"/>
+      <bt:Url id="functionFile" DefaultValue="https://ohade10.github.io/outlook-summarize-addin/function.html"/>
     </bt:Urls>
     <bt:ShortStrings>
       <bt:String id="groupLabel" DefaultValue="Summarize Tools"/>
