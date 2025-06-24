@@ -11,11 +11,11 @@
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Summarize Email"/>
   <Description DefaultValue="Summarizes the content of long emails using AI."/>
-  <IconUrl DefaultValue="https://ohade10.github.io/outlook-summarize-addin/icon-32.png"/>
-  <SupportUrl DefaultValue="https://ohade10.github.io/outlook-summarize-addin/support.html"/>
+  <IconUrl DefaultValue="https://outlook-summarize-addin.netlify.app/icon-32.png"/>
+  <SupportUrl DefaultValue="https://outlook-summarize-addin.netlify.app/support.html"/>
 
   <AppDomains>
-    <AppDomain>https://ohade10.github.io</AppDomain>
+    <AppDomain>https://outlook-summarize-addin.netlify.app</AppDomain>
   </AppDomains>
 
   <Hosts>
@@ -31,7 +31,7 @@
   <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://ohade10.github.io/outlook-summarize-addin/taskpane.html"/>
+        <SourceLocation DefaultValue="https://outlook-summarize-addin.netlify.app/taskpane.html"/>
       </DesktopSettings>
     </Form>
   </FormSettings>
@@ -76,9 +76,9 @@
 
     <Resources>
       <bt:Images>
-        <bt:Image id="icon16" DefaultValue="https://ohade10.github.io/outlook-summarize-addin/icon-16.png"/>
-        <bt:Image id="icon32" DefaultValue="https://ohade10.github.io/outlook-summarize-addin/icon-32.png"/>
-        <bt:Image id="icon80" DefaultValue="https://ohade10.github.io/outlook-summarize-addin/icon-80.png"/>
+        <bt:Image id="icon16" DefaultValue="https://outlook-summarize-addin.netlify.app/icon-16.png"/>
+        <bt:Image id="icon32" DefaultValue="https://outlook-summarize-addin.netlify.app/icon-32.png"/>
+        <bt:Image id="icon80" DefaultValue="https://outlook-summarize-addin.netlify.app/icon-80.png"/>
       </bt:Images>
       <bt:Urls>
         <bt:Url id="taskpaneUrl" DefaultValue="https://outlook-summarize-addin.netlify.app/taskpane.html"/>
