@@ -12,8 +12,7 @@
   <DisplayName DefaultValue="Summarize Email"/>
   <Description DefaultValue="Summarizes the content of long emails using AI."/>
   <IconUrl DefaultValue="https://outlook-summarize-addin.netlify.app/icon-32.png"/>
-  <SupportUrl DefaultValue="https://outlook-summarize-addin.netlify.app/support.html"/>
-
+  
   <AppDomains>
     <AppDomain>https://outlook-summarize-addin.netlify.app</AppDomain>
   </AppDomains>
