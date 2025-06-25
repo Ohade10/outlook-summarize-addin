@@ -48,7 +48,7 @@
     xmlns="http://schemas.microsoft.com/office/mailappversionoverrides"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
-    Version="1.0">
+    Version="1.0.0.0">
 
     <Hosts>
       <Host xsi:type="MailHost">
