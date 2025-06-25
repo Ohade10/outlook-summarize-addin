@@ -4,15 +4,21 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
   xsi:type="MailApp">
-  
-  <Id>9f7abf27-3a8e-4c5e-b2d1-1ac91501e8ea</Id>
+
+  <!-- ✅ Fresh GUID -->
+  <Id>f0cc6e49-c777-4e7c-a2ae-c4a67ae30453</Id>
+
   <Version>1.0.0.0</Version>
-  <ProviderName>Your Company</ProviderName>
+  <ProviderName>Outlook Summarizer</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
+
   <DisplayName DefaultValue="Summarize Email"/>
   <Description DefaultValue="Summarizes the content of long emails using AI."/>
   <IconUrl DefaultValue="https://outlook-summarize-addin.netlify.app/icon-32.png"/>
   
+  <!-- ✅ Required SupportUrl -->
+  <SupportUrl DefaultValue="https://outlook-summarize-addin.netlify.app"/>
+
   <AppDomains>
     <AppDomain>https://outlook-summarize-addin.netlify.app</AppDomain>
   </AppDomains>
@@ -35,14 +41,15 @@
     </Form>
   </FormSettings>
 
-  <Permissions>ReadWriteItem</Permissions>
+  <!-- ✅ Permissions: safer level for sideloading -->
+  <Permissions>ReadItem</Permissions>
 
   <VersionOverrides 
     xmlns="http://schemas.microsoft.com/office/mailappversionoverrides"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
     Version="1.0">
-    
+
     <Hosts>
       <Host xsi:type="MailHost">
         <DesktopFormFactor>
