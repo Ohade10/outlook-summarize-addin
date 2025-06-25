@@ -4,9 +4,13 @@
   <title>Function File</title>
 </head>
 <body>
+  <p style="font-family:sans-serif;">Function file loaded successfully.</p>
+
+  <script src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
   <script>
     Office.initialize = function (reason) {
-      console.log('Office.js initialized');
+      console.log('Office.js initialized:', reason);
+      document.body.insertAdjacentHTML('beforeend', '<p style="color:green;">Office initialized.</p>');
     };
   </script>
 </body>
