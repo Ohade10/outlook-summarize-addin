@@ -1,0 +1,4 @@
+[[headers]]
+  for = "/manifest.xml"
+  [headers.values]
+    Content-Type = "application/xml"
